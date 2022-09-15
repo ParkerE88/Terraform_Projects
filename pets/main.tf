@@ -1,10 +1,10 @@
 resource "local_file" "pet" {
-    filename = "pets/pets.txt"
-    content =  "we love pets!" 
+    filename = var.filename
+    content =  var.content
 }
 
 resource "random_pet" "my-pet" {
-    prefix = "Mrs"
-    separator = "."
-    length = "1"
+    prefix = var.prefix
+    separator = var.separator
+    length = var.length
 }
